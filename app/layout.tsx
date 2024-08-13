@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import Link from "next/link";
-
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import "../styles.css";
 
 interface LayoutProps {
@@ -44,7 +44,9 @@ export default function RootLayout({ children }: LayoutProps) {
               </h1>
             </div>
           </header>
-          {children}
+          <GoogleOAuthProvider clientId="1009282809407-sh8h2kgmot2q295a503sl5530pldnaj9.apps.googleusercontent.com">
+            {children}
+          </GoogleOAuthProvider>
         </div>
         <div className="banner">
           <span>
